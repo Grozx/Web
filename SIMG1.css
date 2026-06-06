@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:transparent;
+    transition:.3s;
+}
+
+.navbar.scrolled{
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.1);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:55px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+@font-face{
+    font-family:'judul';
+    src:url('judul.otf') format('truetype');
+}
+
+@font-face{
+    font-family:'isi';
+    src:url('isi.otf') format('truetype');
+}
+
+
+@font-face{
+    font-family:'a';
+    src:url('a.otf') format('truetype');
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333s;
+    font-weight:600;
+   font-family:'a';
+}
+
+.navbar.scrolled .nav-links a{
+    color:#333;
+}
+
+/* ======================
+   CONTENT
+====================== */
+
+.content{
+    padding-top:100px;
+    padding-bottom:80px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+.banner{
+    width:100%;
+    margin-bottom:40px;
+}
+
+.banner img{
+    width:100%;
+    height:50vh;
+    object-fit:cover;
+    display:block;
+    border-radius:12px;
+}
+
+.content h1{
+    text-align:center;
+    color:#0057B8;
+    font-size:42px;
+    margin-bottom:30px;
+   font-family:'a';
+}
+
+.content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:20px;
+   font-family:'isi';
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#0057B8;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    opacity:.85;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .logo img{
+        height:45px;
+    }
+
+    .banner img{
+        height:40vh;
+    }
+
+    .content h1{
+        font-size:32px;
+    }
+
+    .content p{
+        font-size:16px;
+    }
+}

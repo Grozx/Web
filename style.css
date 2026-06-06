@@ -1,0 +1,292 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+@font-face{
+    font-family:'judul';
+    src:url('judul.otf') format('truetype');
+}
+
+@font-face{
+    font-family:'isi';
+    src:url('isi.otf') format('truetype');
+}
+
+
+@font-face{
+    font-family:'a';
+    src:url('a.otf') format('truetype');
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#333;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:transparent;
+    transition:all .2s ease;
+}
+
+.navbar.scrolled{
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.1);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:55px;
+    width:auto;
+    display:block;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:3s;
+    font-family:'a';
+}
+
+.nav-links a:hover{
+    opacity:.8;
+}
+
+.navbar.scrolled .nav-links a{
+    color:#333;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero{
+    height:100vh;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url("bg.png");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:64px;
+    margin-bottom:20px;
+    font-family:'judul';
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+    font-family:'isi';
+}
+
+/* ======================
+   CONTENT
+====================== */
+
+.about{
+    padding:100px 20px;
+}
+
+/* Jarak antar section besar */
+.karya{
+    padding:150px 20px;
+}
+
+.tentang{
+    padding:150px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:black;
+    font-size:38px;
+    margin-bottom:40px;
+}
+
+/* Section 1 - Biru BI */
+.section1-title{
+    text-align:center;
+    color:#0057B8;
+    font-size:38px;
+    margin-bottom:40px;
+   font-family:'a';
+}
+
+/* Section 2 - Biru Sedang */
+.section2-title{
+    text-align:center;
+    color:#1A73E8;
+    font-size:38px;
+    margin-bottom:40px;
+   font-family:'a';
+}
+
+/* Section 3 - Biru Muda */
+.section3-title{
+    text-align:center;
+    color:#4A90E2;
+    font-size:38px;
+    margin-bottom:40px;
+   font-family:'a';
+}
+
+.about p{
+    max-width:850px;
+    margin:15px;
+    text-align:left;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* ======================
+   GALLERY FOTO
+====================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.gallery-item{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+}
+
+.gallery-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-item h3{
+    text-align:center;
+    padding:15px;
+    color:#333;
+   font-family:'isi';
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+footer{
+    background:#4e7d35;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+   font-family:'a';
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media(max-width:768px){
+
+    .nav-container{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .logo img{
+        height:45px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title,
+    .section1-title,
+    .section2-title,
+    .section3-title{
+        font-size:30px;
+   font-family:'a';
+    }
+
+    .about{
+        padding:70px 20px;
+    }
+
+    .karya{
+        padding:100px 20px;
+    }
+
+    .tentang{
+        padding:100px 20px;
+    }
+
+    .about p{
+        font-size:16px;
+    }
+}
